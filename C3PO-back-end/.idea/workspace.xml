@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Initial back end project">
+    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Initial quizz Q/A seeds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -30,7 +39,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "back-end",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO/src/main/webapp",
+    "last_opened_file_path": "/home/pedro-amaro/Workspace/class03/week-21/implementation/step07-webservices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -38,6 +47,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -67,7 +81,8 @@
       <updated>1732971288712</updated>
       <workItem from="1732971289793" duration="553000" />
       <workItem from="1732971944464" duration="17000" />
-      <workItem from="1732982441290" duration="1977000" />
+      <workItem from="1732982441290" duration="3980000" />
+      <workItem from="1732996009829" duration="3062000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
@@ -77,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732971810588</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial quizz Q/A seeds">
+      <option name="closed" value="true" />
+      <created>1732989098231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732989098231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial back end project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial back end project" />
+    <MESSAGE value="Initial quizz Q/A seeds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial quizz Q/A seeds" />
   </component>
 </project>
