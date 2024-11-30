@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Initial back end project">
-      <change beforePath="$PROJECT_DIR$/../C3PO/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/src/main/webapp/WEB-INF/spring/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/src/main/webapp/WEB-INF/spring/presentation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/src/main/webapp/WEB-INF/spring/spring-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,22 +23,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;back-end&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO/src/main/webapp&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "back-end",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO/src/main/webapp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -72,6 +67,7 @@
       <updated>1732971288712</updated>
       <workItem from="1732971289793" duration="553000" />
       <workItem from="1732971944464" duration="17000" />
+      <workItem from="1732982441290" duration="1977000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
