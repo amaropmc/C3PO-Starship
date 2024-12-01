@@ -2,7 +2,8 @@ package com.codeforall.online.c3po.model;
 
 import jakarta.persistence.*;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Class that represents a planet the user can travel to
@@ -19,7 +20,17 @@ public class Planet extends AbstractModel{
             mappedBy = "planet",
             fetch = FetchType.LAZY
     )
-    private List<Question> questions;
+    private Set<Question> questions = new HashSet<>();
+
+    public void addQuestion(Question question) {
+        this.questions.add(question);
+        question.setPlanet(this);
+    }
+
+    public void removeQuestion(Question question) {
+        this.questions.remove(question);
+        question.setPlanet(null);
+    }
 
     public String getName() {
         return this.name;
@@ -29,11 +40,11 @@ public class Planet extends AbstractModel{
         this.name = name;
     }
 
-    public List<Question> getQuestions() {
+    public Set<Question> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<Question> questions) {
+    public void setQuestions(Set<Question> questions) {
         this.questions = questions;
     }
 }

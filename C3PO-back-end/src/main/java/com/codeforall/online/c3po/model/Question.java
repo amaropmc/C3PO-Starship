@@ -2,7 +2,8 @@ package com.codeforall.online.c3po.model;
 
 import jakarta.persistence.*;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * A class that represents the questions that are part of a quiz
@@ -17,10 +18,20 @@ public class Question extends AbstractModel {
             mappedBy = "question",
             fetch = FetchType.LAZY
     )
-    private List<Answer> answers;
+    private Set<Answer> answers = new HashSet<>();
     private Integer score;
     @ManyToOne
     private Planet planet;
+
+    public void addAnswer(Answer answer) {
+        answers.add(answer);
+        answer.setQuestion(this);
+    }
+
+    public void removeAnswer(Answer answer) {
+        answers.remove(answer);
+        answer.setQuestion(null);
+    }
 
     public String getDescription() {
         return description;
@@ -30,11 +41,11 @@ public class Question extends AbstractModel {
         this.description = description;
     }
 
-    public List<Answer> getAnswers() {
+    public Set<Answer> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<Answer> answers) {
+    public void setAnswers(Set<Answer> answers) {
         this.answers = answers;
     }
 
