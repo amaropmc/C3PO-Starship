@@ -9,11 +9,10 @@ import java.sql.Timestamp;
 /**
  * A generic model domain entity to be used as a base for concrete types of models
  */
-@Entity
 @MappedSuperclass
 public class AbstractModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Version
