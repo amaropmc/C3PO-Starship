@@ -10,7 +10,7 @@ import java.sql.Timestamp;
  * A generic model domain entity to be used as a base for concrete types of models
  */
 @MappedSuperclass
-public class AbstractModel {
+public class AbstractModel implements Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
