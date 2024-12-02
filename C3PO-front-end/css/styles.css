@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  }
+  
+  .edit-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  form {
+    background:linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input[type="password"],
+  form button {
+    background:black;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  form input[type="text"],
+  form button {
+    background:black;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  form button {
+    background-color: #020d19;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .profile-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .profile-panel header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .profile-panel form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-panel form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
