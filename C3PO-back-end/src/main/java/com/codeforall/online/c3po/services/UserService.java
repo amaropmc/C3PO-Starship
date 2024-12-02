@@ -1,7 +1,7 @@
 package com.codeforall.online.c3po.services;
 
 
-import com.codeforall.online.c3po.model.Persistence.managers.TransactionManager;
+import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 
 public class UserService implements User {
 
@@ -41,6 +41,7 @@ public class UserService implements User {
     }
 
     public double getScore(String username) {
+        return 0.0;
     }
 
     /**
