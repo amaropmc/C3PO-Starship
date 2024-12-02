@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="New work">
+    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Created dao interface">
+      <change afterPath="$PROJECT_DIR$/.idea/jpb-settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/exceptions/PlanetNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/exceptions/PlanetNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -44,7 +52,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -85,6 +93,9 @@
       <workItem from="1732999679148" duration="264000" />
       <workItem from="1733049722431" duration="7000" />
       <workItem from="1733083424000" duration="809000" />
+      <workItem from="1733136666404" duration="765000" />
+      <workItem from="1733137451078" duration="3412000" />
+      <workItem from="1733140870600" duration="211000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
@@ -126,7 +137,31 @@
       <option name="project" value="LOCAL" />
       <updated>1732999719931</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed directories and package names">
+      <option name="closed" value="true" />
+      <created>1733138362697</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733138362697</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Initial work on Planet Service + exception handling">
+      <option name="closed" value="true" />
+      <created>1733138388465</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733138388465</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created dao interface">
+      <option name="closed" value="true" />
+      <created>1733138396206</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733138396206</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +173,13 @@
     <MESSAGE value="Changed persistence.xml to include seeds" />
     <MESSAGE value="Updated seeds" />
     <MESSAGE value="New work" />
-    <option name="LAST_COMMIT_MESSAGE" value="New work" />
+    <MESSAGE value="Changed directories and package names" />
+    <MESSAGE value="Initial work on Planet Service + exception handling" />
+    <MESSAGE value="Created dao interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created dao interface" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
