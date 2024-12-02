@@ -13,5 +13,5 @@ public interface PlanetService {
 
     Planet add(Planet planet);
 
-    Planet remove(Planet planet) throws PlanetNotFoundException;
+    void remove(long id);
 }
