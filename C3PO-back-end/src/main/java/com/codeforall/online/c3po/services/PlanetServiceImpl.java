@@ -68,8 +68,7 @@ public class PlanetServiceImpl implements PlanetService {
             transactionManager.rollBack();
         }
     }
-
-
+/*
     public Question addQuestion(long planetId, Question question) throws PlanetNotFoundException {
         Question addedQuestion = null;
 
@@ -113,6 +112,7 @@ public class PlanetServiceImpl implements PlanetService {
 
         return removedQuestion;
     }
+ */
 
     public Set<Long> getQuestionsIds(long planetId) throws PlanetNotFoundException {
         Planet planet = getPlanetById(planetId);
@@ -128,7 +128,7 @@ public class PlanetServiceImpl implements PlanetService {
     }
 
     @Autowired
-    public PlanetServiceImpl(PlanetDao planetDao) {
+    public void setPlanetDao(PlanetDao planetDao) {
         this.planetDao = planetDao;
     }
 }
