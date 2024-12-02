@@ -1,6 +1,6 @@
-package com.codeforall.online.c3po.model.Persistence.managers.jpa;
+package com.codeforall.online.c3po.persistence.managers.jpa;
 
-import com.codeforall.online.c3po.model.Persistence.managers.TransactionManager;
+import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

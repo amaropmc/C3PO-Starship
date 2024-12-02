@@ -1,4 +1,4 @@
-package com.codeforall.online.c3po.model.Services;
+package com.codeforall.online.c3po.services;
 
 public interface User {
 

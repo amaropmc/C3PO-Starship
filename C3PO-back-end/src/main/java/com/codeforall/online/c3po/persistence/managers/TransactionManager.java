@@ -1,4 +1,4 @@
-package com.codeforall.online.c3po.model.Persistence.managers;
+package com.codeforall.online.c3po.persistence.managers;
 
 
 /**

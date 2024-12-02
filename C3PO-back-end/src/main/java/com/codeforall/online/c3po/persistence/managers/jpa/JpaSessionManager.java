@@ -1,6 +1,6 @@
-package com.codeforall.online.c3po.model.Persistence.managers.jpa;
+package com.codeforall.online.c3po.persistence.managers.jpa;
 
-import com.codeforall.online.c3po.model.Persistence.managers.SessionManager;
+import com.codeforall.online.c3po.persistence.managers.SessionManager;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnit;
