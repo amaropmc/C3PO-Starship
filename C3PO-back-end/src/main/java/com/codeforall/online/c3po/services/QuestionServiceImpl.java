@@ -82,6 +82,7 @@ public class QuestionServiceImpl implements QuestionService {
     /**
      * @see QuestionService#removeAnswer(long, long)
      */
+    /*
     @Override
     public void removeAnswer(long questionId, long answerId) throws QuestionNotFoundException, AnswerNotFoundException {
 
@@ -105,6 +106,7 @@ public class QuestionServiceImpl implements QuestionService {
             transactionManager.rollBack();
         }
     }
+    */
 
     /**
      * Set the transaction manager
