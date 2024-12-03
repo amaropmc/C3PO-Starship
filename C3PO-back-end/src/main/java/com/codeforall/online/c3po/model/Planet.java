@@ -10,7 +10,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "planets")
-public class Planet extends AbstractModel{
+public class Planet extends AbstractModel {
 
     @Column(nullable = false)
     private String name;
