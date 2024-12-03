@@ -1,85 +1,228 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  }
-  
-  .edit-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  form {
-    background:linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form input[type="password"],
-  form button {
-    background:black;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    font-size: 0.8rem;
-  }
-  
-  form input[type="text"],
-  form button {
-    background:black;
-    margin-top: 1rem;
-    padding: 0.8rem;
-    font-size: 0.8rem;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #ffa751, #ffe259); 
 
-  form button {
-    background-color: #020d19;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+}
+
+.container {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px;
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  background:url(/assets/tatooine.jpg);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.header-form-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-header-container {
+  margin-bottom: 20px;
+  background-color: rgb(251, 223, 145);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.header h1 {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #35124e;
+  text-shadow: 2px 2px 4px #000, 0 0 25px #ffcc00, 0 0 5px #ffcc00;
+  animation: textGlow 2s ease-in-out infinite, slideIn 1.5s ease-out;
+}
+
+.header button {
+  font-size: 1em;
+  justify-content: center;
+}
+
+
+@keyframes textGlow {
+  0% {
+      text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
   }
-  
-  form button:hover {
-    background-color: #0056b3;
+  50% {
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
   }
-  
-  .profile-panel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    max-width: 500px;
-    margin: 0 auto;
+  100% {
+      text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00;
   }
-  
-  .profile-panel header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
   }
-  
-  .profile-panel form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  100% {
+      transform: translateX(0);
   }
-  
-  .profile-panel form input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+}
+
+
+.form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+  width: 400px; 
+  background-color: rgb(251, 223, 145);
+}
+
+.form-container form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgb(251, 223, 145);
+  border-radius: 4px;
+}
+
+.form-container form button {
+  color: rgb(90, 69, 13);
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container form button:hover {
+  background-color: #003a7a;
+}
+
+.image-container {
+  flex: 1; 
+  height: 95vh; 
+  width: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.image-container img {
+  height: 100%;
+  width: auto; 
+  object-fit: cover; 
+}
+
+
+.planet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 80%;
+  background:linear-gradient(to right, #ffa751, #ffe259); 
+  overflow: hidden;
+  padding: 20px;
+}
+
+.planet-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet-image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.header-card-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header-container {
+  background: url("/assets/walk.gif");
+  border-radius: 15px;
+  max-width: max-content;
+  max-height: fit-content;
+  padding: 15px;
+}
+
+.header button{
+  display: flex;
+  justify-content: center;
+}
+
+
+.curiosity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  margin-top: 20px;
+  width: 80%;
+  background: linear-gradient(to right, #F37335, #FDC830); 
+  border: 1px solid rgba(141, 20, 20, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.curiosity-card h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.curiosity-card p {
+  font-size: 1em;
+  text-align: center;
+  color: #fff;
+}
+
+.c3po-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c3po-image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .planet-container {
+      flex-direction: column;
+      height: auto;
   }
-  
+  .header h1 {
+      font-size: 1.5em;
+  }
+  .form-container form {
+      width: 90%; 
+  }
+}
