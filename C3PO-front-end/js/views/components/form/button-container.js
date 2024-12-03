@@ -1,7 +1,6 @@
 import { div } from "/js/views/components/commons/div.js";
 import { element } from "/js/views/components/commons/element.js";
 import { button } from "/js/views/components/commons/button.js";
-import { submitForm } from "/js/views/components/form/submit-form.js";
 
 const submitButtonEvent = async (event) => {
   event.preventDefault();
