@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment=".idea changes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeforall/online/c3po/services/PlanetServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeforall/online/c3po/services/PlanetServiceImplTest.java" afterDir="false" />
+    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Minor changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/AbstractConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/PlanetToPlanetDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +41,9 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "back-end",
+    "git-widget-placeholder": "back-end-controller",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pedro-amaro/Workspace/class03/week-21/implementation/step07-webservices",
+    "last_opened_file_path": "/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO-back-end",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -122,6 +123,7 @@
       <workItem from="1733158700078" duration="4403000" />
       <workItem from="1733166532293" duration="1555000" />
       <workItem from="1733225349007" duration="5381000" />
+      <workItem from="1733242718162" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
@@ -251,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733230112382</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minor changes">
+      <option name="closed" value="true" />
+      <created>1733243636575</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733243636575</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +284,8 @@
     <MESSAGE value="Updated planet service" />
     <MESSAGE value="Implemented question service" />
     <MESSAGE value=".idea changes" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea changes" />
+    <MESSAGE value="Minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

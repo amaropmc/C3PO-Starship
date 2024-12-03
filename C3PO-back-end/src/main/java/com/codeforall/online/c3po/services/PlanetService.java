@@ -26,7 +26,7 @@ public interface PlanetService {
      * @return a list of planets
      * @throws PlanetNotFoundException
      */
-    List<Planet> list();
+    List<Planet> list() throws PlanetNotFoundException;
 
     /**
      * Add a new planet
