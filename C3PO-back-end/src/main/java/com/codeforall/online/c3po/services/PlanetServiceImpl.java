@@ -1,9 +1,11 @@
 package com.codeforall.online.c3po.services;
 
 import com.codeforall.online.c3po.exceptions.PlanetNotFoundException;
+import com.codeforall.online.c3po.exceptions.QuestionNotFoundException;
 import com.codeforall.online.c3po.model.Planet;
 import com.codeforall.online.c3po.model.Question;
 import com.codeforall.online.c3po.persistence.dao.PlanetDao;
+import com.codeforall.online.c3po.persistence.dao.QuestionDao;
 import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import jakarta.persistence.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,7 @@ public class PlanetServiceImpl implements PlanetService {
 
     private TransactionManager transactionManager;
     private PlanetDao planetDao;
+    private QuestionDao questionDao;
 
     /**
      * @see PlanetService#getPlanetById(long id)
@@ -30,12 +33,17 @@ public class PlanetServiceImpl implements PlanetService {
     public Planet getPlanetById(long id) throws PlanetNotFoundException {
         return Optional.ofNullable(planetDao.findById(id)).orElseThrow(PlanetNotFoundException::new);
     }
-
+    /**
+     * @see PlanetService#list()
+     */
     @Override
-    public List<Planet> list() throws PlanetNotFoundException {
+    public List<Planet> list() {
         return planetDao.findAll();
     }
 
+    /**
+     * @see PlanetService#add(Planet)
+     */
     @Override
     public Planet add(Planet planet) {
         Planet savedPlanet = null;
@@ -54,6 +62,9 @@ public class PlanetServiceImpl implements PlanetService {
         return savedPlanet;
     }
 
+    /**
+     * @see PlanetService#remove(long)
+     */
     @Override
     public void remove(long id) {
 
@@ -68,7 +79,11 @@ public class PlanetServiceImpl implements PlanetService {
             transactionManager.rollBack();
         }
     }
-/*
+
+    /**
+     * @see PlanetService#addQuestion(long, Question)
+     */
+    @Override
     public Question addQuestion(long planetId, Question question) throws PlanetNotFoundException {
         Question addedQuestion = null;
 
@@ -91,29 +106,36 @@ public class PlanetServiceImpl implements PlanetService {
         return addedQuestion;
     }
 
-    public Question removeQuestion(long planetId, long questionId) throws PlanetNotFoundException {
-        Question removedQuestion = null;
-
+    /**
+     * @see PlanetService#removeQuestion(long, long) 
+     */
+    @Override
+    public void removeQuestion(long planetId, long questionId) throws PlanetNotFoundException, QuestionNotFoundException {
         try {
             transactionManager.beginWrite();
 
             Planet planet = getPlanetById(planetId);
-            Question question = questionDao.getQuestionById(questionId);
 
-            planet.removeQuestion(question);
+            Question questionToRemove = questionDao.findById(questionId);
+            if (questionToRemove == null) {
+                throw new QuestionNotFoundException();
+            }
+
+            planet.removeQuestion(questionToRemove); //This will also set the question's planet to null
             planetDao.saveOrUpdate(planet);
-            removedQuestion = questionDao.delete(questionId);
+            questionDao.delete(questionId);
 
             transactionManager.commit();
 
         } catch(PersistenceException e) {
             transactionManager.rollBack();
         }
-
-        return removedQuestion;
     }
- */
 
+    /**
+     * @see PlanetService#getQuestionsIds(long) 
+     */
+    @Override
     public Set<Long> getQuestionsIds(long planetId) throws PlanetNotFoundException {
         Planet planet = getPlanetById(planetId);
 
@@ -122,13 +144,30 @@ public class PlanetServiceImpl implements PlanetService {
                 .collect(Collectors.toSet());
     }
 
+    /**
+     * Set the transaction manager
+     * @param transactionManager the transaction manager to set
+     */
     @Autowired
     public void setTransactionManager(TransactionManager transactionManager) {
         this.transactionManager = transactionManager;
     }
 
+    /**
+     * Set the planet data access object
+     * @param planetDao the planet DAO to set
+     */
     @Autowired
     public void setPlanetDao(PlanetDao planetDao) {
         this.planetDao = planetDao;
+    }
+
+    /**
+     * Set the question data access object
+     * @param questionDao the question DAO to set
+     */
+    @Autowired
+    public void setQuestionDao(QuestionDao questionDao) {
+        this.questionDao = questionDao;
     }
 }
