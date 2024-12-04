@@ -5,11 +5,9 @@ import com.codeforall.online.c3po.model.Planet;
 import com.codeforall.online.c3po.model.Question;
 import com.codeforall.online.c3po.persistence.dao.PlanetDao;
 import com.codeforall.online.c3po.persistence.managers.TransactionManager;
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -17,7 +15,6 @@ import java.util.List;
 
 import static org.mockito.Mockito.*;
 
-@RunWith(JUnitParamsRunner.class)
 public class PlanetServiceImplTest {
     //SUT
     private PlanetServiceImpl planetServiceImpl;
@@ -37,7 +34,7 @@ public class PlanetServiceImplTest {
         planetServiceImpl.setPlanetDao(planetDao);
     }
 
-    private Planet setUpFakePlanet(Integer planetId) {
+    private Planet setUpFakePlanet(Long planetId) {
         Planet planet = new Planet();
 
         planet.setId(planetId);
@@ -66,9 +63,9 @@ public class PlanetServiceImplTest {
     }
 
     @Test
-    @Parameters({"1"})
-    public void testGet(Integer fakePlanetId) throws PlanetNotFoundException {
+    public void testGet() throws PlanetNotFoundException {
         //Setup
+        long fakePlanetId = 1;
         Planet fakePlanet = setUpFakePlanet(fakePlanetId);
 
         //Mock dependencies

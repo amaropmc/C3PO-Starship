@@ -1,11 +1,12 @@
 package com.codeforall.online.c3po.services;
 
-import com.codeforall.online.c3po.exceptions.PlayerNotFoundException;
-import com.codeforall.online.c3po.model.Player;
 
-import java.util.Optional;
+import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 
-public interface UserService {
+public class UserService implements User {
+
+    private TransactionManager transactionManager;
+
 
     /**
      * Get the user by username
@@ -13,30 +14,45 @@ public interface UserService {
      * @param username
      * @return
      */
-    Player getUser(String username) throws PlayerNotFoundException;
+    @Override
+    public User getUser(String username) {
+        return null;
+    }
 
     /**
      * register the user with username
+     *
      * @param username
      * @return
      */
-    boolean registerUser(Player player, String username);
+    @Override
+    public boolean registerUser(String username) {
+        return false;
+    }
 
     /**
      * login?
      * @param username
      * @return
      */
-    boolean authenticate(String username);
+    @Override
+    public User authenticate(String username) {
+        return null;
+    }
+
+    public double getScore(String username) {
+        return 0.0;
+    }
 
     /**
      * update the user's score
+     *
      * @param username
      * @param score
      * @return
      */
-    boolean UpdateUserScore(String username, int score);
-
-    int getTotalScore(String username) throws PlayerNotFoundException;
-
+    @Override
+    public boolean UpdateUserScore(String username, int score) {
+        return false;
+    }
 }
