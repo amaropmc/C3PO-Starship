@@ -22,7 +22,6 @@ public class PlanetServiceImpl implements PlanetService {
 
     private TransactionManager transactionManager;
     private PlanetDao planetDao;
-
     /**
      * @see PlanetService#getPlanetById(long id)
      */
