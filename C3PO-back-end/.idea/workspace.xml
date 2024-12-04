@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Minor changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/AbstractConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/PlanetToPlanetDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/AbstractModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuizController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/PlanetMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaQuestionGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaQuestionGenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +45,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Database Script.DDL.sql.executor": "Run",
+    "Database Script.quizz_seeds.sql.executor": "Run",
     "JUnit.PlanetServiceImplTest.testGet.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -58,6 +68,9 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "574205be-cb23-4934-9307-a38e10612d40"
     ]
   }
 }]]></component>
@@ -70,7 +83,19 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Database Script.quizz_seeds.sql">
+    <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="ffe666db-6bdc-4c7a-a67e-083dd022a3aa" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quizz_seeds.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="574205be-cb23-4934-9307-a38e10612d40" />
+      <method v="2" />
+    </configuration>
     <configuration name="PlanetServiceImplTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="C3PO-Starship" />
       <extension name="coverage">
@@ -89,6 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.quizz_seeds.sql" />
         <item itemvalue="JUnit.PlanetServiceImplTest.testGet" />
       </list>
     </recent_temporary>
@@ -124,6 +150,8 @@
       <workItem from="1733166532293" duration="1555000" />
       <workItem from="1733225349007" duration="5381000" />
       <workItem from="1733242718162" duration="3756000" />
+      <workItem from="1733335590867" duration="3500000" />
+      <workItem from="1733340971863" duration="2668000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />

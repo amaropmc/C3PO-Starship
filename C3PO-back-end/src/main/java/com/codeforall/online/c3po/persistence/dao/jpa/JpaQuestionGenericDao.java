@@ -1,14 +1,16 @@
 package com.codeforall.online.c3po.persistence.dao.jpa;
 
 import com.codeforall.online.c3po.model.Question;
+import com.codeforall.online.c3po.persistence.dao.QuestionDao;
+import org.springframework.stereotype.Repository;
 
-public class JpaQuestionGenericDao extends JpaGenericDao<Question>{
+@Repository
+public class JpaQuestionGenericDao extends JpaGenericDao<Question> implements QuestionDao {
     /**
      * Initialize a new JPA DAO instance given a question model
      *
-     * @param modelType the model type
      */
-    public JpaQuestionGenericDao(Class<Question> modelType) {
-        super(modelType);
+    public JpaQuestionGenericDao() {
+        super(Question.class);
     }
 }

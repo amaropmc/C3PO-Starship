@@ -5,6 +5,7 @@ import com.codeforall.online.c3po.converters.PlanetToPlanetDto;
 import com.codeforall.online.c3po.exceptions.PlanetNotFoundException;
 import com.codeforall.online.c3po.model.Planet;
 import com.codeforall.online.c3po.services.PlanetService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ public class PlanetController {
     private PlanetService planetService;
     private PlanetToPlanetDto planetToPlanetDto;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/")
+    @RequestMapping(method = RequestMethod.GET, path = {"","/"})
     public ResponseEntity<List<PlanetDto>> listPlanets() {
 
         try{
@@ -34,5 +35,16 @@ public class PlanetController {
         } catch (PlanetNotFoundException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+
+    @Autowired
+    public void setPlanetService(PlanetService planetService) {
+        this.planetService = planetService;
+    }
+
+    @Autowired
+    public void setPlanetToPlanetDto(PlanetToPlanetDto planetDto) {
+        this.planetToPlanetDto = planetDto;
     }
 }
