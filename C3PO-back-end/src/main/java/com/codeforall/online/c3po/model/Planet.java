@@ -10,7 +10,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "planets")
-public class Planet extends AbstractModel{
+public class Planet extends AbstractModel {
 
     @Column(nullable = false)
     private String name;
@@ -18,7 +18,7 @@ public class Planet extends AbstractModel{
             cascade = {CascadeType.ALL},
             orphanRemoval = false,
             mappedBy = "planet",
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     private Set<Question> questions = new HashSet<>();
 
