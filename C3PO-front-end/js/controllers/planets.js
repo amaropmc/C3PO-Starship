@@ -51,7 +51,7 @@ const populatePlanets = () => {
     <div>
     <span class="label" >$ Rotation Period:<\span>
     ${planet.rotation_period}</div> 
-    <div><span class="label">$ Orbital Period:<\span> ${planet.orbital_period}</div> 
+    <div><span class="label">$ orbital Period:<\span> ${planet.orbital_period}</div> 
     <div><span class="label">$ Diameter:<\span> ${planet.diameter}</div> 
     <div><span class="label">$ Climate:<\span> ${planet.climate}</div> 
     <div><span class="label">$ Gravity:<\span> ${planet.gravity}</div>
