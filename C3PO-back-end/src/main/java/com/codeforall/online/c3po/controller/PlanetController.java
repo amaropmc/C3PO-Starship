@@ -8,6 +8,7 @@ import com.codeforall.online.c3po.services.PlanetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +18,7 @@ import java.util.List;
 /**
  * Rest controller for providing each planets information
  */
+@CrossOrigin(origins = "*", maxAge = 360)
 @RestController
 @RequestMapping("/planet")
 public class PlanetController {
