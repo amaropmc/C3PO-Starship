@@ -1,6 +1,7 @@
 package com.codeforall.online.c3po.services;
 
 
+
 import com.codeforall.online.c3po.exceptions.PlayerAlreadyExistsException;
 import com.codeforall.online.c3po.exceptions.PlayerNotFoundException;
 import com.codeforall.online.c3po.model.Player;
@@ -9,13 +10,14 @@ import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class UserServiceImpl implements UserService {
+public class PlayerServiceImpl implements PlayerService {
 
     private TransactionManager transactionManager;
     private PlayerDao playerDao;
     private Player player;
-
 
     /**
      * Get the user by username
@@ -24,13 +26,18 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public Player getUser(String username) throws PlayerNotFoundException {
+    public Player getPlayer(String username) throws PlayerNotFoundException {
         player = playerDao.findByUsername(username);
 
         if (player == null) {
             throw new PlayerNotFoundException();
         }
         return player;
+    }
+
+    public List<Player> listAllPlayers() throws PlayerNotFoundException {
+
+        return playerDao.findAll();
     }
 
     /**
@@ -40,8 +47,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public boolean registerUser(Player player, String username) {
-
+    public boolean registerPlayer(String username) {
         if (username == null || username.isEmpty()) {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
@@ -51,7 +57,7 @@ public class UserServiceImpl implements UserService {
 
             Player existingPlayer = playerDao.findByUsername(username);
 
-            if (existingPlayer.equals(player)) {
+            if (!existingPlayer.equals(player)) {
                 player = new Player();
 
                 player.setUsername(username);
@@ -71,15 +77,14 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-
     /**
      * login?
+     *
      * @param username
      * @return
      */
     @Override
     public boolean authenticate(String username) {
-
         if (username == null || username.isEmpty()) {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
@@ -105,7 +110,6 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     * get the player score
      * @param username
      * @return
      */
@@ -117,9 +121,7 @@ public class UserServiceImpl implements UserService {
             throw new PlayerNotFoundException();
         }
 
-        int totalScore = player.getTotalScore() != null ? player.getTotalScore() : 0;
-
-        return totalScore;
+        return player.getTotalScore() != null ? player.getTotalScore() : 0;
     }
 
     /**
@@ -130,11 +132,15 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     @Override
-    public boolean UpdateUserScore(String username, int newScore) {
+    public boolean UpdatePlayerScore(String username, int newScore) {
         player = playerDao.findByUsername(username);
 
         try {
             transactionManager.beginWrite();
+
+            if (!player.equals(playerDao.findByUsername(username))) {
+               throw new PlayerNotFoundException();
+            }
 
             if(newScore > (player.getTotalScore() != null ? player.getTotalScore() : 0)) {
                 player.setTotalScore(newScore);
@@ -150,12 +156,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Autowired
-    public void setTransactionManager(TransactionManager transactionManager) {
-        this.transactionManager = transactionManager;
+    public void setPlayerDao(PlayerDao playerDao) {
+        this.playerDao = playerDao;
     }
 
     @Autowired
-    public void setPlayerDao(PlayerDao playerDao) {
-        this.playerDao = playerDao;
+    public void setTransactionManager(TransactionManager transactionManager) {
+        this.transactionManager = transactionManager;
     }
 }
