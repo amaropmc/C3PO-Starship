@@ -33,6 +33,12 @@ public class PlanetServiceImpl implements PlanetService {
     public Planet getPlanetById(long id) throws PlanetNotFoundException {
         return Optional.ofNullable(planetDao.findById(id)).orElseThrow(PlanetNotFoundException::new);
     }
+
+
+    public Planet getPlanetByName(String name) throws PlanetNotFoundException {
+        return Optional.ofNullable(planetDao.findByName(name)).orElseThrow(PlanetNotFoundException::new);
+    }
+
     /**
      * @see PlanetService#list()
      */

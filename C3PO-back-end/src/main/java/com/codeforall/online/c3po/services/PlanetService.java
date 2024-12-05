@@ -22,6 +22,14 @@ public interface PlanetService {
     Planet getPlanetById(long id) throws PlanetNotFoundException;
 
     /**
+     * Retrieves a planet by its name
+     * @param planetName the planet name
+     * @return the planet
+     * @throws PlanetNotFoundException
+     */
+    Planet getPlanetByName(String planetName) throws PlanetNotFoundException;
+
+    /**
      * Retrieves a list of all the registered planets
      * @return a list of planets
      * @throws PlanetNotFoundException
