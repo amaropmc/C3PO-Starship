@@ -37,7 +37,7 @@ public class JpaSessionManager implements SessionManager<EntityManager> {
     /**
      * Get the curent session
      *
-     * @return
+     * @return the current session
      */
     @Override
     public EntityManager getCurrentSession() {
@@ -45,6 +45,10 @@ public class JpaSessionManager implements SessionManager<EntityManager> {
         return em;
     }
 
+    /**
+     * Set the entity manager factory
+     * @param emf the entity manager factory to set
+     */
     @PersistenceUnit
     public void setEmf(EntityManagerFactory emf) {
         this.emf = emf;

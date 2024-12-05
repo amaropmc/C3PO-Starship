@@ -18,7 +18,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/planet</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

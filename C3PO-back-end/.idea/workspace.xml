@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Minor changes">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Quiz controller working as expected">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/PlanetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuizController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuizController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/converters/PlanetMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/model/Planet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaQuestionGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaQuestionGenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="francisco" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
@@ -43,37 +39,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Database Script.DDL.sql.executor": "Run",
-    "Database Script.quizz_seeds.sql.executor": "Run",
-    "JUnit.PlanetServiceImplTest.testGet.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "back-end-controller",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO-back-end",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.tools",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Database Script.DDL.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.quizz_seeds.sql.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlanetServiceImplTest.testGet.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;back-end-controller&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO-back-end&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "574205be-cb23-4934-9307-a38e10612d40"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;574205be-cb23-4934-9307-a38e10612d40&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -83,7 +79,7 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Database Script.quizz_seeds.sql">
+  <component name="RunManager" selected="Database Script.DDL.sql">
     <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
       <script-file value="$PROJECT_DIR$/src/main/resources/db/DDL.sql" />
       <script-mode>FILE</script-mode>
@@ -151,7 +147,9 @@
       <workItem from="1733225349007" duration="5381000" />
       <workItem from="1733242718162" duration="3756000" />
       <workItem from="1733335590867" duration="3500000" />
-      <workItem from="1733340971863" duration="2668000" />
+      <workItem from="1733340971863" duration="5734000" />
+      <workItem from="1733421902126" duration="4591000" />
+      <workItem from="1733426839220" duration="1974000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
@@ -289,7 +287,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733243636575</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Planet controller working; corrected some bugs">
+      <option name="closed" value="true" />
+      <created>1733344961749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733344961749</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Quiz controller working as expected">
+      <option name="closed" value="true" />
+      <created>1733426461379</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733426461379</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +327,9 @@
     <MESSAGE value="Implemented question service" />
     <MESSAGE value=".idea changes" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Planet controller working; corrected some bugs" />
+    <MESSAGE value="Quiz controller working as expected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quiz controller working as expected" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
