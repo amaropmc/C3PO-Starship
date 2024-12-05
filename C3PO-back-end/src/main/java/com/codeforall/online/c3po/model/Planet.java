@@ -18,7 +18,7 @@ public class Planet extends AbstractModel {
             cascade = {CascadeType.ALL},
             orphanRemoval = false,
             mappedBy = "planet",
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
     )
     private Set<Question> questions = new HashSet<>();
 

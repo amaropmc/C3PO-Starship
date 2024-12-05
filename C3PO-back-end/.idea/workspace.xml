@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment=".idea changes">
+    <list default="true" id="1e0fc96b-5f23-46c1-b635-2f2b08a390ae" name="Changes" comment="Planet controller working; corrected some bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/QuestionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeforall/online/c3po/services/PlanetServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeforall/online/c3po/services/PlanetServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/PlanetDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/PlanetDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/persistence/dao/jpa/JpaPlanetGenericDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeforall/online/c3po/services/PlanetServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +37,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Database Script.DDL.sql.executor": "Run",
+    "Database Script.quizz_seeds.sql.executor": "Run",
     "JUnit.PlanetServiceImplTest.testGet.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "back-end",
+    "git-widget-placeholder": "back-end-controller",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/pedro-amaro/Workspace/class03/week-21/implementation/step07-webservices",
     "node.js.detected.package.eslint": "true",
@@ -57,6 +60,9 @@
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "postgresql"
+    ],
+    "RunConfigurationTargetLRU": [
+      "574205be-cb23-4934-9307-a38e10612d40"
     ]
   }
 }]]></component>
@@ -69,7 +75,19 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Database Script.quizz_seeds.sql">
+    <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="ffe666db-6bdc-4c7a-a67e-083dd022a3aa" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quizz_seeds.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/src/main/resources/db/quizz_seeds.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="574205be-cb23-4934-9307-a38e10612d40" />
+      <method v="2" />
+    </configuration>
     <configuration name="PlanetServiceImplTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="C3PO-Starship" />
       <extension name="coverage">
@@ -88,6 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.quizz_seeds.sql" />
         <item itemvalue="JUnit.PlanetServiceImplTest.testGet" />
       </list>
     </recent_temporary>
@@ -122,6 +141,9 @@
       <workItem from="1733158700078" duration="4403000" />
       <workItem from="1733166532293" duration="1555000" />
       <workItem from="1733225349007" duration="5381000" />
+      <workItem from="1733242718162" duration="3756000" />
+      <workItem from="1733335590867" duration="3500000" />
+      <workItem from="1733340971863" duration="5734000" />
     </task>
     <task id="LOCAL-00001" summary="Initial back end project">
       <option name="closed" value="true" />
@@ -251,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733230112382</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Minor changes">
+      <option name="closed" value="true" />
+      <created>1733243636575</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733243636575</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Planet controller working; corrected some bugs">
+      <option name="closed" value="true" />
+      <created>1733344961749</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733344961749</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +312,9 @@
     <MESSAGE value="Updated planet service" />
     <MESSAGE value="Implemented question service" />
     <MESSAGE value=".idea changes" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea changes" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Planet controller working; corrected some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Planet controller working; corrected some bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
