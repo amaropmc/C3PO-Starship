@@ -1,0 +1,29 @@
+Index: src/main/java/com/codeforall/online/c3po/services/AnswerService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.codeforall.online.c3po.services;\r\n\r\nimport com.codeforall.online.c3po.exceptions.AnswerNotFoundException;\r\nimport com.codeforall.online.c3po.model.Answer;\r\n\r\nimport java.util.List;\r\nimport java.util.Set;\r\n\r\n/**\r\n * Common interface for answer service, provides methods to deal with answers\r\n */\r\npublic interface AnswerService {\r\n\r\n    /**\r\n     * Retrieves an answer by its id\r\n     * @param answerId\r\n     * @return\r\n     * @throws AnswerNotFoundException\r\n     */\r\n    Answer getAnswerById(long answerId) throws AnswerNotFoundException;\r\n\r\n    /**\r\n     * Retrieves  alist of all registered questions\r\n     * @return list of questions\r\n     */\r\n    List<Answer> getAllAnswers();\r\n\r\n\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/com/codeforall/online/c3po/services/AnswerService.java b/src/main/java/com/codeforall/online/c3po/services/AnswerService.java
+--- a/src/main/java/com/codeforall/online/c3po/services/AnswerService.java	(revision 07bca2f2154d1c9985b34cadf68d7e9398a8451c)
++++ b/src/main/java/com/codeforall/online/c3po/services/AnswerService.java	(date 1733392399231)
+@@ -4,7 +4,6 @@
+ import com.codeforall.online.c3po.model.Answer;
+ 
+ import java.util.List;
+-import java.util.Set;
+ 
+ /**
+  * Common interface for answer service, provides methods to deal with answers
+@@ -20,10 +19,8 @@
+     Answer getAnswerById(long answerId) throws AnswerNotFoundException;
+ 
+     /**
+-     * Retrieves  alist of all registered questions
+-     * @return list of questions
++     * Retrieves a list of all registered answers
++     * @return list of answers
+      */
+     List<Answer> getAllAnswers();
+-
+-
+ }

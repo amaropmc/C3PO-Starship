@@ -4,6 +4,7 @@ import com.codeforall.online.c3po.exceptions.AnswerNotFoundException;
 import com.codeforall.online.c3po.exceptions.QuestionNotFoundException;
 import com.codeforall.online.c3po.model.Answer;
 import com.codeforall.online.c3po.model.Question;
+import com.codeforall.online.c3po.persistence.dao.AnswerDao;
 import com.codeforall.online.c3po.persistence.dao.QuestionDao;
 import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import jakarta.persistence.PersistenceException;
@@ -23,7 +24,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     private TransactionManager transactionManager;
     private QuestionDao questionDao;
-    //private AnswerDao answerDao;
+    private AnswerDao answerDao;
 
     /**
      * @see QuestionService#getQuestionById(long)
@@ -68,7 +69,7 @@ public class QuestionServiceImpl implements QuestionService {
             question.addAnswer(answer); // This will also set this answer question property to this question
 
             questionDao.saveOrUpdate(question);
-            //addedAnswer = answerDao.saveOrUpdate(answer);
+            addedAnswer = answerDao.saveOrUpdate(answer);
 
             transactionManager.commit();
 
@@ -82,7 +83,6 @@ public class QuestionServiceImpl implements QuestionService {
     /**
      * @see QuestionService#removeAnswer(long, long)
      */
-    /*
     @Override
     public void removeAnswer(long questionId, long answerId) throws QuestionNotFoundException, AnswerNotFoundException {
 
@@ -106,7 +106,6 @@ public class QuestionServiceImpl implements QuestionService {
             transactionManager.rollBack();
         }
     }
-    */
 
     /**
      * Set the transaction manager
@@ -126,10 +125,12 @@ public class QuestionServiceImpl implements QuestionService {
         this.questionDao = questionDao;
     }
 
-    /*
+    /**
+     * Set the answer data access object
+     * @param answerDao the answer DAO to set
+     */
     @Autowired
     public void setAnswerDao(AnswerDao answerDao) {
         this.answerDao = answerDao;
     }
-     */
 }

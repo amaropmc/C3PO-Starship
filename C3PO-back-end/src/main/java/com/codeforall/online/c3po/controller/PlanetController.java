@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * Rest controller for providing each planet's quiz
+ * Rest controller for providing each planets information
  */
 @RestController
 @RequestMapping("/planet")
@@ -24,6 +24,13 @@ public class PlanetController {
     private PlanetService planetService;
     private PlanetToPlanetDto planetToPlanetDto;
 
+    /**
+     * Handles HTTP GET requests to retrieve a list of all planets
+     *
+     * @return A {@link ResponseEntity} containing a list of {@link PlanetDto} objects and an HTTP status code:
+     * - HTTP 200 OK if the planet list is successfully retrieved and converted.
+     * - HTTP 404 Not Found if there is an issue with retrieving planet data.
+     */
     @RequestMapping(method = RequestMethod.GET, path = {"","/"})
     public ResponseEntity<List<PlanetDto>> listPlanets() {
 
@@ -37,12 +44,19 @@ public class PlanetController {
         }
     }
 
-
+    /**
+     * Set the planet service
+     * @param planetService the planet service to set
+     */
     @Autowired
     public void setPlanetService(PlanetService planetService) {
         this.planetService = planetService;
     }
 
+    /**
+     * Set the planet data transfer object
+     * @param planetDto the planet DTO to set
+     */
     @Autowired
     public void setPlanetToPlanetDto(PlanetToPlanetDto planetDto) {
         this.planetToPlanetDto = planetDto;
