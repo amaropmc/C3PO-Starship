@@ -22,28 +22,52 @@ public class Planet extends AbstractModel {
     )
     private Set<Question> questions = new HashSet<>();
 
+    /**
+     * Add a question to a planet
+     * @param question the question to be added
+     */
     public void addQuestion(Question question) {
         this.questions.add(question);
         question.setPlanet(this);
     }
 
+    /**
+     * Removes a question from a planet
+     * @param question the question to be removed
+     */
     public void removeQuestion(Question question) {
         this.questions.remove(question);
         question.setPlanet(null);
     }
 
+    /**
+     * Get the planet name
+     * @return the planet name
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Set the planet name
+     * @param name the planet name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Get a set of the planet's questions
+     * @return a set of questions
+     */
     public Set<Question> getQuestions() {
         return questions;
     }
 
+    /**
+     * Set a planet's questions
+     * @param questions the questions to set
+     */
     public void setQuestions(Set<Question> questions) {
         this.questions = questions;
     }

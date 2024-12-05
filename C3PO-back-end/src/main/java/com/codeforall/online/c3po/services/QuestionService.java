@@ -52,5 +52,5 @@ public interface QuestionService {
      * @throws QuestionNotFoundException
      * @throws AnswerNotFoundException
      */
-    // void removeAnswer(long questionId, long answerId) throws QuestionNotFoundException, AnswerNotFoundException;
+    void removeAnswer(long questionId, long answerId) throws QuestionNotFoundException, AnswerNotFoundException;
 }
