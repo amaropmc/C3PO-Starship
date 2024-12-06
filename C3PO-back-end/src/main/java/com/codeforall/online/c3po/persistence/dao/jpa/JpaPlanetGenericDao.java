@@ -1,6 +1,12 @@
 package com.codeforall.online.c3po.persistence.dao.jpa;
 
 import com.codeforall.online.c3po.model.Planet;
+import com.codeforall.online.c3po.persistence.dao.PlanetDao;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class JpaPlanetGenericDao extends JpaGenericDao<Planet> implements PlanetDao {

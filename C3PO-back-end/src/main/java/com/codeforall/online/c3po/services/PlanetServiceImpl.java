@@ -1,9 +1,11 @@
 package com.codeforall.online.c3po.services;
 
 import com.codeforall.online.c3po.exceptions.PlanetNotFoundException;
+import com.codeforall.online.c3po.exceptions.QuestionNotFoundException;
 import com.codeforall.online.c3po.model.Planet;
 import com.codeforall.online.c3po.model.Question;
 import com.codeforall.online.c3po.persistence.dao.PlanetDao;
+import com.codeforall.online.c3po.persistence.dao.QuestionDao;
 import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import jakarta.persistence.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -119,7 +121,7 @@ public class PlanetServiceImpl implements PlanetService {
             transactionManager.beginWrite();
 
             Planet planet = getPlanetById(planetId);
-            Question question = questionDao.getQuestionById(questionId);
+            Question question = questionDao.findById(questionId);
 
             Question questionToRemove = questionDao.findById(questionId);
             if (questionToRemove == null) {

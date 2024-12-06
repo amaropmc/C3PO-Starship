@@ -1,7 +1,5 @@
 package com.codeforall.online.c3po.services;
 
-
-
 import com.codeforall.online.c3po.exceptions.PlayerAlreadyExistsException;
 import com.codeforall.online.c3po.exceptions.PlayerNotFoundException;
 import com.codeforall.online.c3po.model.Player;
@@ -17,7 +15,6 @@ public class PlayerServiceImpl implements PlayerService {
 
     private TransactionManager transactionManager;
     private PlayerDao playerDao;
-    private Player player;
 
     /**
      * Get the user by username
@@ -27,7 +24,7 @@ public class PlayerServiceImpl implements PlayerService {
      */
     @Override
     public Player getPlayer(String username) throws PlayerNotFoundException {
-        player = playerDao.findByUsername(username);
+        Player player = playerDao.findByUsername(username);
 
         if (player == null) {
             throw new PlayerNotFoundException();
@@ -37,7 +34,13 @@ public class PlayerServiceImpl implements PlayerService {
 
     public List<Player> listAllPlayers() throws PlayerNotFoundException {
 
-        return playerDao.findAll();
+        List<Player> players = playerDao.findAll();
+
+        if (players.isEmpty()) {
+            throw new PlayerNotFoundException();
+        }
+
+        return players;
     }
 
     /**
@@ -57,11 +60,11 @@ public class PlayerServiceImpl implements PlayerService {
 
             Player existingPlayer = playerDao.findByUsername(username);
 
-            if (!existingPlayer.equals(player)) {
-                player = new Player();
+            if (!existingPlayer.equals(existingPlayer)) {
+                existingPlayer = new Player();
 
-                player.setUsername(username);
-                playerDao.saveOrUpdate(player);
+                existingPlayer.setUsername(username);
+                playerDao.saveOrUpdate(existingPlayer);
 
                 transactionManager.commit();
                 System.out.print("UserService registered successfully" + username);
@@ -133,7 +136,7 @@ public class PlayerServiceImpl implements PlayerService {
      */
     @Override
     public boolean UpdatePlayerScore(String username, int newScore) {
-        player = playerDao.findByUsername(username);
+        Player player = playerDao.findByUsername(username);
 
         try {
             transactionManager.beginWrite();
