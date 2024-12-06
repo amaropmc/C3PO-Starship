@@ -1,11 +1,9 @@
 package com.codeforall.online.c3po.services;
 
 import com.codeforall.online.c3po.exceptions.PlanetNotFoundException;
-import com.codeforall.online.c3po.exceptions.QuestionNotFoundException;
 import com.codeforall.online.c3po.model.Planet;
 import com.codeforall.online.c3po.model.Question;
 import com.codeforall.online.c3po.persistence.dao.PlanetDao;
-import com.codeforall.online.c3po.persistence.dao.QuestionDao;
 import com.codeforall.online.c3po.persistence.managers.TransactionManager;
 import jakarta.persistence.PersistenceException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +41,7 @@ public class PlanetServiceImpl implements PlanetService {
      * @see PlanetService#list()
      */
     @Override
-    public List<Planet> list() {
+    public List<Planet> list() throws PlanetNotFoundException {
         return planetDao.findAll();
     }
 
@@ -113,7 +111,7 @@ public class PlanetServiceImpl implements PlanetService {
     }
 
     /**
-     * @see PlanetService#removeQuestion(long, long) 
+     * @see PlanetService#removeQuestion(long, long)
      */
     @Override
     public void removeQuestion(long planetId, long questionId) throws PlanetNotFoundException, QuestionNotFoundException {
@@ -121,6 +119,7 @@ public class PlanetServiceImpl implements PlanetService {
             transactionManager.beginWrite();
 
             Planet planet = getPlanetById(planetId);
+            Question question = questionDao.getQuestionById(questionId);
 
             Question questionToRemove = questionDao.findById(questionId);
             if (questionToRemove == null) {
@@ -139,7 +138,7 @@ public class PlanetServiceImpl implements PlanetService {
     }
 
     /**
-     * @see PlanetService#getQuestionsIds(long) 
+     * @see PlanetService#getQuestionsIds(long)
      */
     @Override
     public Set<Long> getQuestionsIds(long planetId) throws PlanetNotFoundException {

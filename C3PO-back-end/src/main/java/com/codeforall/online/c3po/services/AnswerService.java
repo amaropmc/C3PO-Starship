@@ -5,6 +5,9 @@ import com.codeforall.online.c3po.model.Answer;
 
 import java.util.List;
 
+/**
+ * Common interface for answer service, provides methods to deal with answers
+ */
 public interface AnswerService {
 
     /**
