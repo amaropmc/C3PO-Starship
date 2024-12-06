@@ -157,16 +157,73 @@ h2 {
 }
 
 #quiz-framework {
-  background-image: url(/assets/desert.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/assets/backgroundplanets.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 50%;
   height: 80vh;
   width: 100vw;
   position: absolute;
   z-index: 6;
   display: none;
   top: 10vh;
+}
+
+.question-box {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(0, 123, 167, 0.7), rgba(0, 51, 102, 0.7));
+  border: 2px solid white;
+  border-radius: 10px; 
+  z-index: 7;
+  margin: 3% 10% 3% 10%;
+  height: 40%;
+  color: white;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  max-height: 20%;
+}
+
+.question-header .counter {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.question-content {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 60%;
+  font-size: 40px;
+  text-align: center; 
+  word-wrap: break-word; 
+}
+
+.answers-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; 
+  width: 80%;
+  margin: 3% 10% 3% 10%;
+}
+
+.answer-option {
+  background: linear-gradient(to bottom, rgba(0, 123, 167, 0.7), rgba(0, 51, 102, 0.7));
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
 }
 
 /* Animations*/
@@ -218,5 +275,17 @@ h2 {
   }
   100% {
     letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 768px) {
+  .question-content {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .question-content {
+    font-size: 20px;
   }
 }

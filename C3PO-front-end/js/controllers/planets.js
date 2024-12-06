@@ -1,3 +1,5 @@
+import{ loadQuiz } from "/js/controllers/quiz.js";
+
 let loadingPlanets = true;
 const PLANETS_URL = "https://swapi.dev/api/planets/";
 let planets = [];
@@ -23,6 +25,7 @@ const loadPlanets = async (func) => {
   }
 };
 
+/*
 const openQuiz = (planetName) => {
   const quizFramework = document.getElementById("quiz-framework");
   const mainElement = document.getElementById("main");
@@ -30,6 +33,7 @@ const openQuiz = (planetName) => {
   quizFramework.innerHTML = planetName;
   quizFramework.setAttribute("style", "display: block");
 };
+*/
 
 const populatePlanets = () => {
   const loadingElement = document.getElementById("loading");
@@ -60,8 +64,12 @@ const populatePlanets = () => {
     const planetButton = document.createElement("button");
     planetButton.className = "planet-button";
     planetButton.textContent = "Take Quiz";
-    planetButton.onclick = () => {
-      openQuiz(planet.name);
+    planetButton.onclick = (event) => {
+      event.preventDefault();
+      
+      window.history.pushState({},'',`/${planet.name}`);
+      loadQuiz(planet.name);
+
     };
 
     // planet info
