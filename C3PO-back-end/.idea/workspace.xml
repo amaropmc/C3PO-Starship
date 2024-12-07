@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="539b8cac-d08d-4502-9512-988fe15ab81a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/classes/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/spring/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/spring/spring-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/Tatooine-planet.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/Tattooine.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/desert.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/droide.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/hello.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/hi.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/meet.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/planet_tatooine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/space.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/star.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/star1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/stars.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/tatooine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/video.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/wait.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/walk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/wallpaper.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/home-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/home-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/planet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/js/views/components/planet/card.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ptCwZ14qoPrgs9nO1RaXd12hgE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Database Script.DDL.sql (1).executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql (2).executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql .executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.quizz_seeds.sql.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;quiz&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/carina/C3PO-Starship/C3PO-back-end/target/C3PO-Starship&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;d22c0e10-96ae-4e89-86f3-0b090179d2c7&quot;,
+      &quot;84a72c7d-ff17-4a23-8225-fcd147bbafb7&quot;,
+      &quot;84a72c7d-ff17-4a23-8225-fcd147bbafb7/database/\&quot;c3po\&quot;&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="DDL.sql (1)" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="d22c0e10-96ae-4e89-86f3-0b090179d2c7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql (2)" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="84a72c7d-ff17-4a23-8225-fcd147bbafb7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql " type="DatabaseScript" editBeforeRun="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="d22c0e10-96ae-4e89-86f3-0b090179d2c7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="138523d8-e4b9-4ed0-97d5-c0d99fdc9843" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quizz_seeds.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/quizz_seeds.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="84a72c7d-ff17-4a23-8225-fcd147bbafb7" namespace="database/&quot;c3po&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="539b8cac-d08d-4502-9512-988fe15ab81a" name="Changes" comment="" />
+      <created>1733576223422</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733576223422</updated>
+      <workItem from="1733576252453" duration="1482000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
