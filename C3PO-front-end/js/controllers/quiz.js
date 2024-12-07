@@ -1,5 +1,6 @@
 const GENERAL_QUIZ_URL = "http://localhost:8080/c3po/planet/";
 let userScore = 0;
+let visitedPlanets = [];
 /*
 Example planetQuiz as they are received from the BD
 */
@@ -91,8 +92,12 @@ export const loadQuiz = (planetName) => {
 
     THE RESULT IS AN ARRAY OF QUESTIONS&ANSWERS AS IN THE EXAMPLE
     */
-
-    renderQuiz(planetQuiz);
+    if(!visitedPlanets.includes(planetName)) {
+        renderQuiz(planetQuiz);
+        visitedPlanets.push(planetName);
+    } else {
+        console.log("This planet's quiz has already been taken.");
+    }
 
     console.log(planetQuiz);
 }
@@ -109,6 +114,8 @@ const renderQuiz = planetQuiz => {
             */
             generateQuizCard(planetQuiz[currentQuestionIndex], showNextQuestion);
             currentQuestionIndex ++;
+        } else {
+            /* Add logic to back the previous page */
         }
     }
 
@@ -124,53 +131,92 @@ const generateQuizCard = (questionAndAnswer, onAnswerSelect) => {
 
     const quizFramework = document.getElementById("quiz-framework");
     quizFramework.innerHTML = "";
-    quizFramework.setAttribute("style", "display: block");
+    quizFramework.setAttribute("style", "display: flex");
 
-    const questionBox = document.createElement('div');
-    questionBox.className = "question-box";
+    const c3poContainer = document.createElement('div');
+    c3poContainer.className = "robot-container";
 
-        const questionHeader = document.createElement('div');
-        questionHeader.className = "question-header";
+        const image = document.createElement('img');
+        image.className = "robot-img";
+        image.src = "./assets/C-3PO.jpg";
 
-            const closeButton = document.createElement('button');
-            closeButton.className = "close-btn";
-            closeButton.innerHTML = "X";
-            questionHeader.appendChild(closeButton);
+        const dialogBaloon = document.createElement('div');
+        dialogBaloon.className = "dialog";
+        dialogBaloon.innerHTML= "Good luck to you!"
 
-            const questionCount = document.createElement('div');
-            questionCount.className = "counter";
-            questionCount.innerHTML = questionAndAnswer.id;
-            questionHeader.appendChild(questionCount);
+            const dialogTail = document.createElement('div');
+            dialogTail.className = "tail";
 
-        const questionContent = document.createElement('div')
-        questionContent.className = "question-content";
-        questionContent.innerHTML = questionAndAnswer.description;
+            dialogBaloon.appendChild(dialogTail);
+
+        c3poContainer.appendChild(image);    
+        c3poContainer.appendChild(dialogBaloon);
+
+    quizFramework.appendChild(c3poContainer);
+
+    const quizContainer = document.createElement('div');
+    quizContainer.className = "quiz-container";
+
+        const questionBox = document.createElement('div');
+        questionBox.className = "question-box";
+
+            const questionHeader = document.createElement('div');
+            questionHeader.className = "question-header";
+                /*
+                const closeButton = document.createElement('button');
+                closeButton.className = "close-btn";
+                closeButton.innerHTML = "Go BACK";
+                questionHeader.appendChild(closeButton);
+                */
+
+                const questionCount = document.createElement('div');
+                questionCount.className = "counter";
+                questionCount.innerHTML = questionAndAnswer.id;
+                questionHeader.appendChild(questionCount);
+
+            const questionContent = document.createElement('div')
+            questionContent.className = "question-content";
+            questionContent.innerHTML = questionAndAnswer.description.toLowerCase();
 
         questionBox.appendChild(questionHeader);
         questionBox.appendChild(questionContent);
 
-    const answersBox = document.createElement('div');
-    answersBox.className = "answers-box";
+        const answersBox = document.createElement('div');
+        answersBox.className = "answers-box";
 
-        questionAndAnswer.answers.forEach(answer => {
-            const option = document.createElement('div');
-            option.className = "answer-option";
-            option.innerHTML = answer.description;
+            questionAndAnswer.answers.forEach(answer => {
+                const option = document.createElement('div');
+                option.className = "answer-option";
+                option.innerHTML = answer.description.toLowerCase();
 
-            option.onclick = () => {
+                answersBox.appendChild(option);
 
-                onAnswerSelect();
-
-                if(answer.correct) {
-                    userScore += questionAndAnswer.score;
-                }
-
-                console.log(userScore);
+                option.onclick = () => {
+                    if (answer.correct) {
+                        option.style.backgroundColor = "green";
+                        dialogBaloon.innerHTML = "";
+                        dialogBaloon.innerHTML = "Very well, master!";
+                    } else {
+                        option.style.backgroundColor = "red"; 
+                        dialogBaloon.innerHTML = "";
+                        dialogBaloon.innerHTML = "We're doomed!";
+                    }
+            
+                    // Add a delay of 1 seconds before calling the callback
+                    setTimeout(() => {
+                        onAnswerSelect();
+            
+                        if (answer.correct) {
+                            userScore += questionAndAnswer.score;
+                        }
+            
+                        console.log(userScore);
+                    }, 1000);
             }
-
-            answersBox.appendChild(option);
         });
         
-    quizFramework.appendChild(questionBox);
-    quizFramework.appendChild(answersBox);    
+        quizContainer.appendChild(questionBox);
+        quizContainer.appendChild(answersBox);
+
+    quizFramework.appendChild(quizContainer);    
 }
