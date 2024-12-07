@@ -1,3 +1,5 @@
+import{ loadQuiz } from "/js/controllers/quiz.js";
+
 let loadingPlanets = true;
 const PLANETS_URL = "https://swapi.dev/api/planets/";
 let planets = [];
@@ -23,6 +25,16 @@ const loadPlanets = async (func) => {
   }
 };
 
+/*
+const openQuiz = (planetName) => {
+  const quizFramework = document.getElementById("quiz-framework");
+  const mainElement = document.getElementById("main");
+  mainElement.className = "pop-up";
+  quizFramework.innerHTML = planetName;
+  quizFramework.setAttribute("style", "display: block");
+};
+*/
+
 const populatePlanets = () => {
   const loadingElement = document.getElementById("loading");
   const mainElement = document.getElementById("main");
@@ -44,6 +56,22 @@ const populatePlanets = () => {
     planetWrapper.className = "planet-wrapper";
     planetWrapper.setAttribute("style", `flex-grow: ${randomNumber}`);
 
+    //planet info
+    const infoPlanetWrapper = document.createElement("div");
+    infoPlanetWrapper.className = "info-planet-wrapper";
+
+    // planet button
+    const planetButton = document.createElement("button");
+    planetButton.className = "planet-button";
+    planetButton.textContent = "Take Quiz";
+    planetButton.onclick = (event) => {
+      event.preventDefault();
+      
+      window.history.pushState({},'',`/${planet.name}`);
+      loadQuiz(planet.name);
+
+    };
+
     // planet info
     const planetInfo = document.createElement("div");
     planetInfo.className = "planet-info";
@@ -59,9 +87,6 @@ const populatePlanets = () => {
     <div><span class="label">$ Surface Water:<\span> ${planet.surface_water}</div> 
     <div><span class="label">$ Population:<\span> ${planet.population}</div>`;
 
-    planetWrapper.appendChild(planetInfo);
-    planetContainer.appendChild(planetWrapper);
-
     // planet
     const planetItem = document.createElement("div");
     planetItem.setAttribute(
@@ -70,18 +95,19 @@ const populatePlanets = () => {
     );
     let planetItemClassName = "star-wars-planets";
     if (index % 2 == 0) {
+      planetButton.className = planetButton.className + " planet-button-even";
       planetItemClassName = planetItemClassName + " planet-even";
     }
     planetItem.className = planetItemClassName;
-    planetWrapper.appendChild(planetItem);
+
+    planetWrapper.prepend(planetButton);
+    infoPlanetWrapper.appendChild(planetItem);
+    infoPlanetWrapper.appendChild(planetInfo);
+    planetWrapper.appendChild(infoPlanetWrapper);
     planetContainer.appendChild(planetWrapper);
   });
 };
 
 window.onload = () => {
   loadPlanets(populatePlanets);
-
-  //deinir array com nome dos planetas
-  //filtrar array com os planetas q escolheram
-  //planetas: Tattooine, Alderaan,  Hoth, Bespin, Endor e Dagobah
 };
