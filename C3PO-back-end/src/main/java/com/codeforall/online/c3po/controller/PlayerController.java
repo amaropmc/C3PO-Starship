@@ -32,16 +32,15 @@ public class PlayerController {
 
             List<Player> players = playerService.listAllPlayers();
 
-            PlayerToPlayerDto dto = new PlayerToPlayerDto();
 
-            return new ResponseEntity<>(dto.convert(players), HttpStatus.OK);
+            return new ResponseEntity<>(playerToPlayerDto.convert(players), HttpStatus.OK);
         } catch (PlayerNotFoundException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @RequestMapping(method = RequestMethod.GET, path = {"/{username}"})
-    public ResponseEntity getPlayerByUsername(@PathVariable String username) {
+    public ResponseEntity<?> getPlayerByUsername(@PathVariable String username) {
         try {
             Player player = playerService.getPlayer(username);
 
@@ -55,7 +54,7 @@ public class PlayerController {
     public ResponseEntity<?> addPlayer(@Valid @RequestBody PlayerDto playerDto, BindingResult bindingResult,
                                     UriComponentsBuilder uriComponentsBuilder) {
 
-        if (bindingResult.hasErrors() || playerDto.getUsername() != null) {
+        if (bindingResult.hasErrors() || playerDto.getId() != null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
@@ -83,7 +82,7 @@ public class PlayerController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        if (playerDto.getUsername() != null && playerDto.getUsername().equals(username)) {
+        if (playerDto.getId() != null && playerDto.getUsername().equals(username)) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 

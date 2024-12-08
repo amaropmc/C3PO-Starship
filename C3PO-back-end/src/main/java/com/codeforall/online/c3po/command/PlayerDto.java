@@ -6,11 +6,13 @@ import jakarta.validation.constraints.Size;
 
 public class PlayerDto {
 
-    @NotNull
-    @NotBlank
+    @NotNull(message = "Username is mandatory")
+    @NotBlank(message = "Username is mandatory")
     @Size(min = 3, max = 64)
     private String username;
     private int score;
+
+    private Integer id;
 
     public String getUsername() {
         return username;
@@ -24,8 +26,17 @@ public class PlayerDto {
         return score;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setScore(int score) {
         this.score = score;
     }
+
 
 }

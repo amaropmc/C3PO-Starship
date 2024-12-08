@@ -12,6 +12,7 @@ public class PlayerToPlayerDto extends AbstractConverter<Player, PlayerDto> {
         PlayerDto playerDto = new PlayerDto();
 
         playerDto.setUsername(player.getUsername());
+        playerDto.setScore(player.getTotalScore());
 
         return playerDto;
     }
