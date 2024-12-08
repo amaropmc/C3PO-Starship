@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a34e1a6-a388-45b5-a063-02aad5ef862a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="539b8cac-d08d-4502-9512-988fe15ab81a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/c3po/droide.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/assets/c3po/droide.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/assets/c3po/hi.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/assets/c3po/hi.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../C3PO-front-end/css/planets.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/css/planets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/css/quiz.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/planets.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/planets.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/js/controllers/quiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C3PO-front-end/planets.html" beforeDir="false" afterPath="$PROJECT_DIR$/../C3PO-front-end/planets.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../C3PO-front-end/quiz.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,43 +24,84 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2ptGaOhqEPkrl7oQau4MaLYNB7c" />
+  <component name="ProjectId" id="2ptCwZ14qoPrgs9nO1RaXd12hgE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Database Script.DDL.sql (1).executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql (2).executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql .executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.DDL.sql.executor&quot;: &quot;Run&quot;,
+    &quot;Database Script.quizz_seeds.sql.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;quiz&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;user&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/pedro-amaro/Desktop/FinalAssignment/C3PO-Starship/C3PO-back-end&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/carina/C3PO-Starship/C3PO-back-end/target/C3PO-Starship&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;d22c0e10-96ae-4e89-86f3-0b090179d2c7&quot;,
+      &quot;84a72c7d-ff17-4a23-8225-fcd147bbafb7&quot;,
+      &quot;84a72c7d-ff17-4a23-8225-fcd147bbafb7/database/\&quot;c3po\&quot;&quot;
+    ]
   }
 }</component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration name="DDL.sql (1)" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/C3PO-Starship/WEB-INF/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="d22c0e10-96ae-4e89-86f3-0b090179d2c7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql (2)" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="84a72c7d-ff17-4a23-8225-fcd147bbafb7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql " type="DatabaseScript" editBeforeRun="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="d22c0e10-96ae-4e89-86f3-0b090179d2c7" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DDL.sql" type="DatabaseScript" editBeforeRun="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/DDL.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="138523d8-e4b9-4ed0-97d5-c0d99fdc9843" namespace="database/&quot;c3po&quot;/schema/&quot;public&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="quizz_seeds.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/target/classes/db/quizz_seeds.sql" />
+      <script-mode>FILE</script-mode>
+      <data-source id="84a72c7d-ff17-4a23-8225-fcd147bbafb7" namespace="database/&quot;c3po&quot;" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9a34e1a6-a388-45b5-a063-02aad5ef862a" name="Changes" comment="" />
-      <created>1733578021025</created>
+      <changelist id="539b8cac-d08d-4502-9512-988fe15ab81a" name="Changes" comment="" />
+      <created>1733576223422</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1733578021025</updated>
-      <workItem from="1733578022093" duration="16000" />
-      <workItem from="1733585940925" duration="1000" />
+      <updated>1733576223422</updated>
+      <workItem from="1733576252453" duration="1482000" />
+      <workItem from="1733622437789" duration="601000" />
     </task>
     <servers />
   </component>

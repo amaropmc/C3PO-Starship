@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="0eef0781-a069-43fe-b7e6-802cb6a06eb1" name="DDL Mapping">
+      <data-sources db="b762f4c1-90fb-48e6-892e-4868ecf1d78a" ddl="ea299e96-02bb-451b-aecb-2aa7582b2ac6" />
+    </mapping>
+    <mapping uuid="87f07d59-adb4-456f-8490-436f4744d727" name="c3po@localhost (DDL) Mapping">
+      <data-sources db="b762f4c1-90fb-48e6-892e-4868ecf1d78a" ddl="ea299e96-02bb-451b-aecb-2aa7582b2ac6" />
+    </mapping>
+    <mapping uuid="8de026b4-fae4-495f-8597-20111e06f2c1" name="c3po@localhost Mapping">
+      <data-sources db="0deb5297-804b-4ef5-ae7a-0f0b3410b1a0" />
+    </mapping>
+  </component>
+</project>

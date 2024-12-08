@@ -1,15 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C3PO: Home</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <div class="container"></div>
-  <script type="module" src="/js/controllers/home-page.js"></script>
-        <a href="planet.html" class="btn"></a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-3PO - Planets</title>
+
+    <!-- Custom Styles -->
+    <link href="css/planets.css" rel="stylesheet" />
+
+  </head>
+  <body>
+
+
+    <!-- Placeholder for home -->
+    <div class="container"></div>
+    
+    <!-- Placeholder for planets -->
+  
+    <div class="loading"></div>
+    <div class="main"></div>
+        <div id="planet-container"></div>
+
+     
+
+      <!-- Placeholder for quiz -->
+      <div id="quiz-framework"></div>
+    
+      <!-- Placeholder for score -->
+      <div class="result-class"></div>
+    </div>
+
+    <!-- Script imports -->
+    <script type="module" src="js/controllers/home.js"></script>
+    <script type="module" src="/js/controllers/planets.js"></script>
+    <script type="module" src="/js/controllers/quiz.js"></script>
+    <script type="module" src="/js/controllers/score.js"></script>
+  </body>
 </html>

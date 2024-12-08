@@ -1,4 +1,5 @@
 const GENERAL_QUIZ_URL = "http://localhost:8080/c3po/planet/";
+import{ score } from "/js/controllers/score.js";
 let userScore = 0;
 let visitedPlanets = [];
 /*
@@ -83,7 +84,7 @@ export const loadQuiz = (planetName) => {
     /*
     * To consume the BD REST API
 
-    const response = await fetch(GENERAL_QUIZ_URL + `${planetName}/quiz`);
+    const response = await fetch(GENERAL_QUIZ_URL + ${planetName}/quiz);
 
     if(response.ok) {
         const data = await response.json();
@@ -115,30 +116,35 @@ const renderQuiz = planetQuiz => {
             generateQuizCard(planetQuiz[currentQuestionIndex], showNextQuestion);
             currentQuestionIndex ++;
         } else {
-            /* Add logic to back the previous page */
+            score(userScore);
         }
     }
 
     showNextQuestion(); //Invoked for the first time here!
 }
 
+
+
 /*
 This function takes in an object from the array and has a call back function - onAnswerSelect. This is going to trigger the showNextQuestion in the renderQuiz function.
 */
+
 const generateQuizCard = (questionAndAnswer, onAnswerSelect) => {
     const mainElement = document.getElementById("main");
     mainElement.className = "pop-up";
 
     const quizFramework = document.getElementById("quiz-framework");
     quizFramework.innerHTML = "";
+    quizFramework.style.visibility = "visible"; 
     quizFramework.setAttribute("style", "display: flex");
+    quizFramework.style.display = "flex";
 
     const c3poContainer = document.createElement('div');
     c3poContainer.className = "robot-container";
 
-        const image = document.createElement('img');
-        image.className = "robot-img";
-        image.src = "./assets/C-3PO.jpg";
+        const robotImage = document.createElement('img');
+        robotImage.className = "robot-img";
+        robotImage.src = "./assets/C-3PO.jpg";
 
         const dialogBaloon = document.createElement('div');
         dialogBaloon.className = "dialog";
@@ -149,7 +155,7 @@ const generateQuizCard = (questionAndAnswer, onAnswerSelect) => {
 
             dialogBaloon.appendChild(dialogTail);
 
-        c3poContainer.appendChild(image);    
+        c3poContainer.appendChild(robotImage);    
         c3poContainer.appendChild(dialogBaloon);
 
     quizFramework.appendChild(c3poContainer);
@@ -159,15 +165,19 @@ const generateQuizCard = (questionAndAnswer, onAnswerSelect) => {
 
         const questionBox = document.createElement('div');
         questionBox.className = "question-box";
+    
 
             const questionHeader = document.createElement('div');
             questionHeader.className = "question-header";
-                /*
-                const closeButton = document.createElement('button');
-                closeButton.className = "close-btn";
-                closeButton.innerHTML = "Go BACK";
-                questionHeader.appendChild(closeButton);
-                */
+               
+            const backButton = document.createElement('button');
+                backButton.className = "back-btn";
+                backButton.innerHTML = "Back";
+                backButton.onclick = () => {
+                quizFramework.style.visibility = "hidden";
+                mainElement.className = ""; 
+};
+questionHeader.appendChild(backButton);
 
                 const questionCount = document.createElement('div');
                 questionCount.className = "counter";
@@ -219,4 +229,4 @@ const generateQuizCard = (questionAndAnswer, onAnswerSelect) => {
         quizContainer.appendChild(answersBox);
 
     quizFramework.appendChild(quizContainer);    
-}
+} 

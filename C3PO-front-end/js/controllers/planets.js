@@ -13,7 +13,7 @@ const selectedPlanets = [
   "Dagobah",
 ];
 
-const loadPlanets = async (func) => {
+ export const loadPlanets = async (func) => {
   const response = await fetch(PLANETS_URL);
   if (response.ok) {
     const data = await response.json();
@@ -35,18 +35,20 @@ const openQuiz = (planetName) => {
 };
 */
 
-const populatePlanets = () => {
+export const populatePlanets = () => {
   const loadingElement = document.getElementById("loading");
   const mainElement = document.getElementById("main");
+  const planetContainer = document.getElementById("planet-container");
 
-  loadingElement.setAttribute("style", "display: none");
-  mainElement.setAttribute("style", "display: block");
 
   planets = planets.filter((planet) => {
     return selectedPlanets.includes(planet.name);
   });
   console.log(planets);
-  const planetContainer = document.getElementById("planet-container");
+  //const planetContainer = document.getElementById("planet-container");
+
+  planetContainer.innerHTML = '';
+
   planets.forEach((planet, index) => {
     const randomNumber = Math.random() * 6;
     console.log(randomNumber);
@@ -66,26 +68,24 @@ const populatePlanets = () => {
     planetButton.textContent = "Take Quiz";
     planetButton.onclick = (event) => {
       event.preventDefault();
-      
-      window.history.pushState({},'',`/${planet.name}`);
+       window.history.pushState({},'',`/${planet.name}`);
       loadQuiz(planet.name);
-
     };
 
     // planet info
     const planetInfo = document.createElement("div");
     planetInfo.className = "planet-info";
-    planetInfo.innerHTML = `<div><span class="label">$ Name:<\span> ${planet.name}</div> 
+    planetInfo.innerHTML = `<div><span class="label">$ Name:</span> ${planet.name}</div> 
     <div>
-    <span class="label" >$ Rotation Period:<\span>
+    <span class="label" >$ Rotation Period:</span>
     ${planet.rotation_period}</div> 
-    <div><span class="label">$ orbital Period:<\span> ${planet.orbital_period}</div> 
-    <div><span class="label">$ Diameter:<\span> ${planet.diameter}</div> 
-    <div><span class="label">$ Climate:<\span> ${planet.climate}</div> 
-    <div><span class="label">$ Gravity:<\span> ${planet.gravity}</div>
-    <div><span class="label">$ Terrain:<\span> ${planet.terrain}</div> 
-    <div><span class="label">$ Surface Water:<\span> ${planet.surface_water}</div> 
-    <div><span class="label">$ Population:<\span> ${planet.population}</div>`;
+    <div><span class="label">$ orbital Period:</span> ${planet.orbital_period}</div> 
+    <div><span class="label">$ Diameter:</span> ${planet.diameter}</div> 
+    <div><span class="label">$ Climate:</span> ${planet.climate}</div> 
+    <div><span class="label">$ Gravity:</span> ${planet.gravity}</div>
+    <div><span class="label">$ Terrain:</span> ${planet.terrain}</div> 
+    <div><span class="label">$ Surface Water:</span> ${planet.surface_water}</div> 
+    <div><span class="label">$ Population:</span> ${planet.population}</div>`;
 
     // planet
     const planetItem = document.createElement("div");
@@ -108,6 +108,7 @@ const populatePlanets = () => {
   });
 };
 
-window.onload = () => {
+/*window.onload = () => {
   loadPlanets(populatePlanets);
-};
+};*/
+
