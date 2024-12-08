@@ -47,7 +47,7 @@ public class PlayerServiceImpl implements PlayerService {
      * @return
      */
     @Override
-    public boolean registerPlayer(String username) {
+    public Player registerPlayer(String username) {
         if (username == null || username.isEmpty()) {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
@@ -65,7 +65,7 @@ public class PlayerServiceImpl implements PlayerService {
 
                 transactionManager.commit();
                 System.out.print("UserService registered successfully" + username);
-                return true;
+                return player;
             } else {
                 transactionManager.rollBack();
                 throw new PlayerAlreadyExistsException("Username already exists");
@@ -73,7 +73,7 @@ public class PlayerServiceImpl implements PlayerService {
 
         } catch (Exception e) {
             transactionManager.rollBack();
-            return false;
+            return player;
         }
     }
 
@@ -153,6 +153,26 @@ public class PlayerServiceImpl implements PlayerService {
             return false;
         }
         return true;
+    }
+
+    public void deletePlayer(String username) throws PlayerNotFoundException {
+        boolean commitSuccessful = false;
+        try {
+            transactionManager.beginWrite();
+
+           Player player = playerDao.findByUsername(username);
+
+           if (player != null) {
+               playerDao.delete(player.getId());
+           } else throw new PlayerNotFoundException();
+
+           transactionManager.commit();
+           commitSuccessful = true;
+        } finally {
+            if(!commitSuccessful) {
+                transactionManager.rollBack();
+            }
+        }
     }
 
     @Autowired

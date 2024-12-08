@@ -24,10 +24,11 @@ public interface PlayerService {
 
     /**
      * register the user with username
+     *
      * @param username
      * @return
      */
-    boolean registerPlayer(String username);
+    Player registerPlayer(String username);
 
     /**
      * login?
@@ -50,5 +51,7 @@ public interface PlayerService {
      * @return
      */
     int getTotalScore(String username) throws PlayerNotFoundException;
+
+    void deletePlayer(String username) throws PlayerNotFoundException;
 
 }
