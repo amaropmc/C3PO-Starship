@@ -19,7 +19,6 @@ public class PlayerDtoToPlayer {
 
         if (playerDto.getUsername() != null) {
             player = playerService.getPlayer(playerDto.getUsername());
-            throw new PlayerNotFoundException();
         } else {
             player = new Player();
         }

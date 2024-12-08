@@ -41,7 +41,7 @@ public class PlayerController {
     }
 
     @RequestMapping(method = RequestMethod.GET, path = {"/{username}"})
-    public ResponseEntity getPlayerByUsername(@PathVariable String username) {
+    public ResponseEntity<PlayerDto> getPlayerByUsername(@PathVariable String username) {
         try {
             Player player = playerService.getPlayer(username);
 
@@ -109,8 +109,6 @@ public class PlayerController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-
-
 
     @Autowired
     public void setPlayerService(PlayerService playerService) {

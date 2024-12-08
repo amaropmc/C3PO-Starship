@@ -5,12 +5,21 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class PlayerDto {
+    private Long id;
 
     @NotNull
     @NotBlank
     @Size(min = 3, max = 64)
     private String username;
     private int score;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
