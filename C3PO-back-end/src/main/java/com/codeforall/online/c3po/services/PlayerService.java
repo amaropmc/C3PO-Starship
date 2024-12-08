@@ -28,7 +28,7 @@ public interface PlayerService {
      * @param username
      * @return
      */
-    Player registerPlayer(String username);
+    Player registerPlayer(String username, Integer score);
 
     /**
      * login?

@@ -47,7 +47,7 @@ public class PlayerServiceImpl implements PlayerService {
      * @return
      */
     @Override
-    public Player registerPlayer(String username) {
+    public Player registerPlayer(String username, Integer score) {
         if (username == null || username.isEmpty()) {
             throw new IllegalArgumentException("Username cannot be null or empty");
         }
@@ -61,6 +61,7 @@ public class PlayerServiceImpl implements PlayerService {
                 player = new Player();
 
                 player.setUsername(username);
+                player.setTotalScore(score);
                 playerDao.saveOrUpdate(player);
 
                 transactionManager.commit();

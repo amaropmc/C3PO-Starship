@@ -19,7 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
-@RequestMapping("/player")
+@RequestMapping("api/player")
 public class PlayerController {
 
     private PlayerService playerService;
@@ -50,7 +50,7 @@ public class PlayerController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.POST, path = {"/", ""})
+    @RequestMapping(method = RequestMethod.POST, path = {"/add"})
     public ResponseEntity<?> addPlayer(@Valid @RequestBody PlayerDto playerDto, BindingResult bindingResult,
                                     UriComponentsBuilder uriComponentsBuilder) {
 
@@ -61,7 +61,7 @@ public class PlayerController {
         try {
             Player player =  playerDtoToPlayer.convert(playerDto);
 
-            Player savedPlayer = playerService.registerPlayer(player.getUsername());
+            Player savedPlayer = playerService.registerPlayer(player.getUsername(), playerDto.getScore());
 
             UriComponents uriComponents = uriComponentsBuilder
                     .path("/api/player/" + savedPlayer.getUsername()).build();
@@ -76,13 +76,13 @@ public class PlayerController {
 
     }
 
-    @RequestMapping(method = RequestMethod.PUT, path = {"/username"})
+    @RequestMapping(method = RequestMethod.PUT, path = {"/edit/{username}"})
     public ResponseEntity<?> editPlayer(@Valid @RequestBody PlayerDto playerDto, BindingResult bindingResult, @PathVariable String username) {
         if (bindingResult.hasErrors()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 
-        if (playerDto.getId() != null && playerDto.getUsername().equals(username)) {
+        if (playerDto.getId() != null || !playerDto.getUsername().equals(username)) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
 

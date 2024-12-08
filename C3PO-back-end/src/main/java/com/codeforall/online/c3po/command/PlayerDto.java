@@ -10,7 +10,7 @@ public class PlayerDto {
     @NotBlank(message = "Username is mandatory")
     @Size(min = 3, max = 64)
     private String username;
-    private int score;
+    private Integer score;
 
     private Long id;
 
