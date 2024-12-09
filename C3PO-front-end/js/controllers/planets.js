@@ -45,7 +45,6 @@ const populatePlanets = () => {
   const planetContainer = document.getElementById("planet-container");
   planets.forEach((planet, index) => {
     const randomNumber = Math.random() * 6;
-    console.log(randomNumber);
 
     // planet wrapper
     const planetWrapper = document.createElement("div");
@@ -56,28 +55,18 @@ const populatePlanets = () => {
     const infoPlanetWrapper = document.createElement("div");
     infoPlanetWrapper.className = "info-planet-wrapper";
 
-    // planet button
-    const planetButton = document.createElement("button");
-    planetButton.className = "planet-button";
-    planetButton.textContent = "Take Quiz";
-    planetButton.onclick = () => {
-      openQuiz(planet.name);
-    };
-
-    // planet info
     const planetInfo = document.createElement("div");
     planetInfo.className = "planet-info";
-    planetInfo.innerHTML = `<div><span class="label">$ Name:<\span> ${planet.name}</div> 
-    <div>
-    <span class="label" >$ Rotation Period:<\span>
-    ${planet.rotation_period}</div> 
+    planetInfo.innerHTML = `<div>
+    <div><span class="label">$ Name:<\span> ${planet.name}</div> 
+    <div><span class="label" >$ Rotation Period:<\span> ${planet.rotation_period}</div> 
     <div><span class="label">$ orbital Period:<\span> ${planet.orbital_period}</div> 
     <div><span class="label">$ Diameter:<\span> ${planet.diameter}</div> 
     <div><span class="label">$ Climate:<\span> ${planet.climate}</div> 
     <div><span class="label">$ Gravity:<\span> ${planet.gravity}</div>
     <div><span class="label">$ Terrain:<\span> ${planet.terrain}</div> 
     <div><span class="label">$ Surface Water:<\span> ${planet.surface_water}</div> 
-    <div><span class="label">$ Population:<\span> ${planet.population}</div>`;
+    <div><span class="label">$ Population:<\span> ${planet.population}</div></div>`;
 
     // planet
     const planetItem = document.createElement("div");
@@ -87,14 +76,21 @@ const populatePlanets = () => {
     );
     let planetItemClassName = "star-wars-planets";
     if (index % 2 == 0) {
-      planetButton.className = planetButton.className + " planet-button-even";
-      planetItemClassName = planetItemClassName + " planet-even";
+      planetItemClassName += " planet-even";
     }
     planetItem.className = planetItemClassName;
 
-    planetWrapper.prepend(planetButton);
+    // planet button
+    const planetButton = document.createElement("button");
+    planetButton.className = "planet-button";
+    planetButton.textContent = "Take quiz";
+    planetButton.onclick = () => {
+      openQuiz(planet.name);
+    };
+
     infoPlanetWrapper.appendChild(planetItem);
     infoPlanetWrapper.appendChild(planetInfo);
+    planetInfo.appendChild(planetButton);
     planetWrapper.appendChild(infoPlanetWrapper);
     planetContainer.appendChild(planetWrapper);
   });
